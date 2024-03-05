@@ -9,7 +9,6 @@ function Accueil(){
 
     const pokemonsList = useSelector(state => state.pokemons.pokemonsList)
     const dispatch = useDispatch()
-    // console.log(pokemonsList)
 
     useEffect(() => {
         if(!pokemonsList){
