@@ -28,7 +28,7 @@ function CodeGiver(){
     return(
         <div className="codeGiverOverlay">
             <div className="codeGiverBox">
-                <span>Votre code qui vous servira à vous connecter</span>
+                <span>Veuillez noter ce code qui servira à vous connecter</span>
                 <span className="giver">{code}</span>
                 <button onClick={() => handleClickConnection()}>Se connecter</button>
             </div>
