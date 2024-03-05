@@ -23,14 +23,12 @@ export default function useQuizzChoice(quizzOnRef){
     }
 
     const saveDataNecessaryForAnswer = (index) => {
-        console.log("index => ", index)
         switch(index){
             case 0:
                 return
             case 1:
                 const type = pokemonsOfQuizz[indexOfQuizz]?.apiTypes.map(type => type.name) // On récupère les types du pokemon présenter
                 dispatch(updateAnswerType(type)) // On sauvegarde la bonne réponse dans redux
-                console.log("Type du pokemon : ", type)
                 return
             default:
                 return

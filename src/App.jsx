@@ -19,10 +19,10 @@ function App() {
       <Routeur>
         <main>
           <Routes>
-            <Route path="/" element={<Authentication />}/>
-            <Route path="inscription" element={<Inscription />}/>
-            <Route path="codeGiver" element={<CodeGiver />}/>
-            <Route path="application/:userName/" element={<Application />}>
+            <Route index path="PokeQuizz" element={<Authentication />}/>
+            <Route path="PokeQuizz/inscription" element={<Inscription />}/>
+            <Route path="PokeQuizz/codeGiver" element={<CodeGiver />}/>
+            <Route path="PokeQuizz/application/:userName/" element={<Application />}>
               <Route index path="accueil" element={<Accueil/>}/>
               <Route path="quizz" element={<Quizz/>}/>
               <Route path="statistique" element={<Statistique/>}/>

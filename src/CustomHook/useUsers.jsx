@@ -62,7 +62,7 @@ export default function useUsers(){
             dispatch(addUsers(newObject)) // On met à jour notre state Users
             dispatch(initiateUserHistory({userName:userName, history:[]}))// On lui créé un nouvel historique
             dispatch(changeSecure(true))
-            navigate("../codeGiver?userName="+encodeURIComponent(userName))
+            navigate("../PokeQuizz/codeGiver?userName="+encodeURIComponent(userName))
         }
     }
 

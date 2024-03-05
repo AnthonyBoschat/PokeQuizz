@@ -8,7 +8,7 @@ function Inscription(){
 
     return(
         <div className="inscriptionOverlay">
-            <Link className="back" to="/">Retour</Link>
+            <Link className="back" to="/PokeQuizz">Retour</Link>
             <form onSubmit={(e) => submitNewUsers(e)} action="">
                 <input ref={inputUserName} placeholder="Nom d'utilisateur" type="text" />
                 <input type="submit" value="S'inscrire" />

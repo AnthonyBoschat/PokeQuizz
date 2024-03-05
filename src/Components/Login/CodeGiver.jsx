@@ -15,13 +15,13 @@ function CodeGiver(){
 
     useEffect(() => {
         if(!secure){
-            navigate("/")
+            navigate("/PokeQuizz")
         }
     }, [])
 
     const handleClickConnection = () => {
         dispatch(changeSecure(false))
-        navigate("/")
+        navigate("/PokeQuizz")
     }
 
 

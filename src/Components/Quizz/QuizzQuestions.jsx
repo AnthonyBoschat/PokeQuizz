@@ -11,8 +11,8 @@ function QuizzQuestions(){
 
     return(
         <div className="quizzQuestionsBox">
-            <img className={buttonClicked ? "" : "blur-disapear"} src={pokemonsOfQuizz[indexOfQuizz]?.image} alt={pokemonsOfQuizz[indexOfQuizz]?.name} title={pokemonsOfQuizz[indexOfQuizz]?.name} />
-            {pokemonsOfQuizz[indexOfQuizz + 1] && (<img style={{display:"none"}} src={pokemonsOfQuizz[indexOfQuizz + 1]?.image} alt={pokemonsOfQuizz[indexOfQuizz]?.name} title={pokemonsOfQuizz[indexOfQuizz]?.name} />)}
+            <img className={buttonClicked ? "" : "blur-disapear"} src={pokemonsOfQuizz[indexOfQuizz]?.image} alt={pokemonsOfQuizz[indexOfQuizz]?.name} />
+            {pokemonsOfQuizz[indexOfQuizz + 1] && (<img style={{display:"none"}} src={pokemonsOfQuizz[indexOfQuizz + 1]?.image} alt={pokemonsOfQuizz[indexOfQuizz]?.name} />)}
         </div>
     )
 }
