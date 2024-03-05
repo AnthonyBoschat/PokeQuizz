@@ -1,0 +1,419 @@
+.quizzDisplay{
+    // outline: 1px solid black;
+    width: 100%;
+    height: 100%;
+
+    .quizzOff{
+        animation: box-smooth-apparition 0.5s ease forwards;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // outline: 1px solid black;
+
+        .startButton {
+            font-size: 10vw;
+            position: relative;
+            top: -0.2em;
+            // outline: 1px solid black;
+            color: black; /* Couleur initiale du texte */
+            background-image: linear-gradient(90deg, rgba(2, 118, 138, 0.761) 0%, rgb(26, 117, 133) 100%);
+            background-clip: text;
+            transition: all 0.5s ease; /* Transition uniquement sur la couleur */
+            display: flex; 
+            border-radius: 100%;
+            justify-content: center;
+            align-items: center;
+
+            i{
+                position: absolute;
+                left: 50%;
+                transform: translate(-40%);
+                font-size: 5vw;
+            }
+
+            svg{
+                // outline: 1px solid black;
+                border-radius: 100%;
+                transform: rotate(-90deg);
+
+                circle{
+                    stroke: black;
+                    fill: none;
+                    transition: all 0.5s ease;
+                    stroke-dasharray: 125%;
+                    stroke-linecap: round;
+                }
+            }
+            
+            &:hover, &:hover circle{
+                cursor: pointer;
+                color: rgba(2, 118, 138, 0.761); /* Rend le texte transparent pour afficher le dégradé */
+                stroke: rgba(2, 118, 138, 0.761);
+            }
+            
+        }
+    }
+    
+    .quizzOn{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        // outline: 1px solid black;
+
+        .quizzBarDisplay{
+            // outline: 1px solid black; //
+            width: 100%;
+            height: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .quizzBarBox{
+                width: 50%;
+                height: 30%;
+                // outline: 1px solid black;
+                display: flex;
+                justify-content: center;
+                gap: 0.4vw;
+
+                >div{
+                    width: 4vw;
+                    height: 100%;
+                    outline: 1px solid black;
+                    transition: background-color 0.3s;
+                }
+            }
+        }
+
+        .quizzTimeDisplay{
+            width: 100%;
+            height: 5%;
+            // outline: 1px solid black; //
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .quizzTimeBox{
+                // outline: 1px solid black; //
+                width: 80%;
+                height: 30%;
+                border-radius: 20px;
+                background-color: rgba(219, 139, 34, 0.613);
+            }
+        }
+
+
+
+        .quizzQuestionsBox{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            img{
+                height: 70%;
+                width: auto;
+            }
+        }
+    
+        .quizzResponsesBox{
+            width: 100%;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .quizzButtonsBox{
+                width: 90%;
+                height: 80%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+
+                button{
+                    background-color: rgba(61, 175, 221, 0.481);
+                    outline: 1px solid black;
+                    margin: 1em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    box-shadow: 5px 5px 10px black;
+                    transition: all 0.3s;
+
+                    &:hover{
+                        cursor: pointer;
+                        background-color: rgba(61, 176, 221, 0.678);
+                    }
+                    
+                    span{
+                        font-size: 2vw;
+                    }
+                }
+            }
+        }
+
+        .quizzScoreOverlay{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .quizzScoreDisplay{
+                // outline: 1px solid black;
+                width: 80%;
+                height: 80%;
+                display: flex;
+
+                .quizzScoreBox{
+                    // outline: 1px solid black;
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    >div{
+                        font-size: 2vw;
+                        display: flex;
+                        gap: 2vw;
+                        align-items: center;
+                        opacity: 0; //
+                        transition: opacity 1s;
+
+                        i{
+                            font-size: 3vw;
+                            color: rgb(253, 191, 5);
+                            text-shadow: 0px 0px 4px black;
+                        }
+
+                        >span{
+                            font-size: 3vw;
+                        }
+
+                    }
+                }
+
+
+
+
+
+                .quizzLogoBox{
+                    width: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .logoEnglobe{
+                        opacity: 0;
+                        transition: opacity 1s;
+
+                        i{
+                            font-size: 10vw;
+                            text-shadow: 0px 10px 10px black;
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+
+    }
+}
+
+.pokemonQuizzResponseDisplay{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // outline: 1px solid black; //
+
+    .pokemonQuizzResponseName{
+        animation: box-smooth-apparition 0.3s forwards ease;
+        font-size: 3vw;
+        // outline: 1px solid black; //
+        position: relative;
+        top: -2vw;
+    }
+
+    .pokemonQuizzResponseType{
+        animation: box-smooth-apparition 0.3s forwards ease;
+        // font-size: 3vw;
+        // outline: 1px solid black; //
+        position: relative;
+        top: -2vw;
+        display: flex;
+        gap: 2vw;
+    }
+}
+
+
+
+.quizzResponsesNameBox{
+    width: 100%;
+    height: 40%;
+    // outline: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+
+    .quizzResponse2Form{
+        outline: 1px solid black;
+        height: fit-content;
+        width: 30%;
+
+        > div{
+            outline: 1px solid black;
+            display: flex;
+            flex-direction: column;
+
+            
+    
+            .InputSearch{
+                font-size: 1.5vw;
+                padding: 0.2vw;
+            }
+
+            .quizzSuggestion{
+                font-size: 1.3vw;
+                height: fit-content;
+                max-height: 11vw;
+                display: flex;
+                flex-direction: column;
+                overflow-y: auto;
+                // outline: 1px solid black;
+                background-color: rgba(255, 255, 255, 0.515);
+
+                .suggestionBox{
+                    padding: 0.2vw;
+                    // outline: 1px solid black;
+                    width: 100%;
+
+                    .suggestionName{
+                        font-family: 'Open Sans', sans-serif;
+                    }
+
+                    // suggestionSelected
+                    &:hover{
+                        cursor: pointer;
+                        background-color: rgba(0, 174, 255, 0.24);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.quizzResponsesTypeBox{
+    // outline: 1px solid black; //
+    display: grid;
+    grid-template-rows: 2fr 2vh 5fr;
+    height: 40%;
+    width: 100%;
+
+    .userTypeSelectionBox{
+        // outline: 1px solid black; //
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+        margin-bottom: 1vw;
+
+        i{
+            font-size: 2vw;
+            color: rgba(35, 172, 11, 0.919);
+            outline: 0.1vw solid black; //
+            border-radius: 100%;
+            background-color: black;
+
+            &:hover{
+                cursor: pointer;
+                box-shadow: 0px 0px 20px rgb(0, 148, 5);
+            }
+        }
+    }
+
+    .typeListDisplay{
+        // outline: 1px solid black; //
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 1vw;
+        flex-wrap: wrap;
+        
+
+        .typeListBox{
+            width: 80%;
+            height: 50%;
+            // outline: 1px solid black; //
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(9, 1fr);
+            gap: 1em;
+        }
+    } 
+}
+
+.typeButton{
+    border: none;
+    outline: 1px solid black;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.655) inset;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.2vw;
+    width: 6vw;
+    font-family: 'Open Sans', sans-serif;
+
+    &:hover{
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.441) inset,
+                    5px 5px 10px rgba(0, 0, 0, 0.809),
+                    -1px -1px 10px 1px rgba(0, 0, 0, 0.43);
+        cursor: pointer;
+    }
+}
+
+.typeSelected{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.441) inset,
+                    5px 5px 10px rgba(0, 0, 0, 0.809),
+                    -1px -1px 10px 1px rgba(0, 0, 0, 0.43);
+}
+
+
+
+$TypesCouleurs : (
+    Feu: rgba(255, 98, 0, 0.564),
+    Plante: rgba(6, 249, 1, 0.449),
+    Eau: rgba(0, 123, 255, 0.517),
+    Normal: rgba(187, 187, 187, 0.923),
+    Poison: rgba(182, 27, 213, 0.527),
+    Vol: rgba(170, 152, 240, 0.802),
+    Insecte: rgba(149, 163, 0, 0.786),
+    Électrik: rgba(255, 225, 0, 0.651),
+    Sol: rgba(203, 152, 71, 0.919),
+    Psy: rgba(247, 74, 103, 0.778),
+    Fée: rgb(246, 183, 193),
+    Combat: rgba(211, 39, 5, 0.729),
+    Roche: rgb(193, 186, 109),
+    Glace: rgba(125, 222, 248, 0.818),
+    Spectre: rgba(172, 108, 255, 0.696),
+    Dragon: rgba(137, 53, 247, 0.696),
+    Ténèbres: rgb(101, 67, 67),
+    Acier: rgb(165, 182, 215),
+);
+
+@each $type, $couleur in $TypesCouleurs{
+    .#{$type}{
+        background-color: $couleur;
+    }
+}

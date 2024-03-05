@@ -1,0 +1,87 @@
+.featureBox{
+    width: 100vw;
+    height: 90vh;
+
+    .searchBarBox{
+        animation: box-smooth-apparition 1s ease forwards;
+        // outline: 1px solid black; //
+        width: 100%;
+        height: 20%;
+        // background-color: rgba(255, 0, 0, 0.493); //
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    
+        input{
+            padding: 0.5vw;
+            width: 30%;
+            font-size: 1.5vw;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 5px 5px 10px black;
+            padding-left: 1vw;
+            margin-bottom: 1em;
+        }
+    }
+    
+    .pokemonsListDisplay{
+        // background-color: rgba(0, 255, 255, 0.585); //
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .pokemonsToShowBox{
+            width: 95%;
+            max-width: 95%;
+            height: 90%;
+            // outline: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            overflow-y: auto;
+            justify-content: space-evenly;
+
+            &::-webkit-scrollbar{
+                width: 0;
+            }
+
+            div{
+                margin: 1em;
+                width: 10em;
+                height: 10em;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(30, 144, 186, 0.283);
+                // outline: 1px solid black;
+                padding: 1vw;
+                box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.655) inset;
+                transition: all 0.4s ease;
+
+                img{
+                    // outline: 1px solid black;
+                    padding: 1vw;
+                    width: 80%;
+                    height: auto;
+                    transition: all 0.2s;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.441) inset,
+                                0px 0px 0px rgba(0, 0, 0, 0.441) inset,
+                                5px 5px 10px rgba(0, 0, 0, 0.809),
+                                -1px -1px 10px 1px rgba(0, 0, 0, 0.43);
+                }
+
+                &:hover img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+

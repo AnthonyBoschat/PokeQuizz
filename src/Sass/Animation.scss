@@ -1,0 +1,69 @@
+@keyframes newScoreAnimation{
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.newScoreAnimation{animation: newScoreAnimation 0.5s 1;}
+
+@keyframes circle-disparition{
+    from {
+        stroke: rgba(2, 118, 138, 0.761);
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+    to {
+        stroke: rgba(2, 118, 138, 0.761);
+        stroke-dashoffset: -125%;
+        opacity: 0;
+    }
+}
+.circle-disparition{animation: circle-disparition 2s forwards ease-out;}
+
+@keyframes playLogo-disparition{
+    from{
+        opacity: 1;
+        color: rgba(2, 118, 138, 0.761);
+    }
+    to{
+        opacity: 0;
+        color: rgba(2, 118, 138, 0.761);
+    }
+}
+.playLogo-disparition{animation: playLogo-disparition 1.5s forwards ease-out;}
+
+
+@keyframes box-smooth-apparition{
+    from{opacity: 0;}
+    to{opacity: 1}
+};
+.box-smooth-apparition{animation: box-smooth-apparition 1s forwards ease;}
+
+@keyframes box-smooth-disparition{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+.box-smooth-disparition{
+    animation: box-smooth-disparition 1s forwards ease;
+}
+
+@keyframes blur-disapear{
+    from{filter: blur(60px);}
+    to{filter: blur(0px);}
+}
+.blur-disapear{
+    filter: blur(60px);
+    animation: blur-disapear 10s forwards ease;
+}
+
+@keyframes time-disapear{
+    to{width: 0%; display: none;}
+}
+.time-disapear{animation: time-disapear 10s forwards ease-in-out;}
+
+.suggestionSelected{
+    cursor: pointer;
+    background-color: rgba(0, 174, 255, 0.24);
+}
